@@ -1,0 +1,80 @@
+#============================================================================#
+# script2-parlier-trap-data-summary.R
+#
+# Learn and demonstrate basic data summary techniques
+#
+#============================================================================#
+
+library(tidyverse) # preferred environment; tibble, dplyr, tidyr, ggplot2, etc
+library(lubridate) # for epiweek()
+library(FSA) # for se()
+
+### Import the csv data using a function from the package readr. The data 
+### should be in Global Memory (the environment tab) as a tibble. What is
+### the difference between a tibble and a data frame in base R?
+# dat <- 
+# head(read.csv("/Users/zacharydawson/Desktop/y21-walnut-traps-ssjv.csv"))
+dat <- read_csv("/Users/#/Desktop/y21-walnut-traps-ssjv.csv")
+
+
+
+### Show the first several lines of the data file. 
+
+dat
+# # A tibble: 912 × 6
+#   site  date_in    date_out   trap_type trap_numer now_total
+#   <chr> <date>     <date>     <chr>          <dbl>     <dbl>
+# 1 Fox   2021-05-03 2021-05-10 Ovibait            1         6
+# 2 Fox   2021-05-03 2021-05-10 Ovibait            2         9
+# 3 Fox   2021-05-03 2021-05-10 Ovibait            3        16
+
+
+### String variables like Site are described as categorical. Usually there
+### are a few fix values for categorical variables. These are called "levels".
+#
+### How many levels are there for site? Show them
+unique(dat$site)
+# [1] "Fox"    "Lang"   "Lyon"   "Hutson" "Olam"   "Racine"
+
+### How many levels are there for trap_type? Show them
+unique(dat$trap_type)
+# [1] "Ovibait" "PPO"     "Biolure"
+
+### Find the first and the last date in the data set (note that the dat in 
+### date_out should always be later than the date in date_in). 
+min(dat$date_in)
+# [1] "2021-05-03"
+max(dat$date_in)
+# [1] "2021-10-04"
+
+### What package is the function epiweek() from? What does it do? Find the 
+### value of epiweek for each date, and determine how many values of how many
+### values of epiweek there are per site. Are the cases of multiple records
+### per epiweek? Or skipped epiweek?
+dat %>% 
+  mutate(epiwk = epiweek(date_in))
+
+
+### Create a new data frame (tibble) in which each observation of ovibait from 
+### the same site and date is pooled (i.e., so that, for each site and date, 
+### there is a single number from each trap type). Also get the number of 
+### observations in the sum
+data.frame()
+tibble()
+
+### Check to determine if each observation of Ovibait is a sum of 6 traps
+
+
+### Create a new data set with season-long sums by site and trap_type (note 
+### that this is ) raw data for a subsequent summary step. However, we still
+### want the number of observations associated with each sum
+
+
+
+### Use this new data set to get number of observations, mean, and standard
+### error for each trap type, using the site as a replicate
+
+
+
+### Use the data set just created to create a presentation-ready vertical bar
+### chart with ggplot2
