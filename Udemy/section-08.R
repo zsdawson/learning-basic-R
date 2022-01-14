@@ -34,3 +34,24 @@ mat[mat>15] #printing the whole matrix but only when its true that it is over 15
 mat + mat #adds the matrix 
 
 mat %*% mat # this is to do true mathematical matrix multiplication 
+
+################################################################################
+goog <- c(450,541,452,445,468)
+msft <- c(230,231,232,233,220)
+stocks <- c(goog,msft)
+stocksn <- c("goog","msft")
+
+stockMatrix <- matrix(stocks,byrow = T,nrow = 2)
+stock
+
+days <- c("mon","tue","wed","thu","fri")
+
+colnames(stockMatrix) <- days
+rownames(stockMatrix) <- stocksn
+
+stockMatrix
+
+colSums(stockMatrix) # column summery 
+rowSums(stockMatrix) # row sum
+
+rowMeans(stockMatrix)
