@@ -55,3 +55,13 @@ colSums(stockMatrix) # column summery
 rowSums(stockMatrix) # row sum
 
 rowMeans(stockMatrix)
+FB <- c(111,112,113,120,145)
+stockMatrix <- rbind(stockMatrix,FB)
+stockMatrix
+
+avg <- rowMeans(stockMatrix)
+avg
+
+stockMatrix <- cbind(stockMatrix,avg)
+stockMatrix
+
