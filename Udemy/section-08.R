@@ -6,7 +6,6 @@ matrix(v, nrow = 2)
 
 v2.1 <- matrix(v2,byrow = T, nrow = 4)
 v2.1
-
 ################################################################################
 goog <- c(450,451,452,445,468)
 msft <- c(230,231,232,233,220) # just naming some vectors 
@@ -22,3 +21,16 @@ stNames <- c('goog','msft') #
 colnames(stockMatrix) <- days # naming the column 
 rownames(stockMatrix) <- stNames # naming the row
 stockMatrix
+
+################################################################################
+
+mat <- matrix(1:25,byrow = T,nrow = 5)
+mat1 <- mat**2
+mat2 <- mat^2
+
+mat > 15   #printing the whole matrix but when its true that it is over 15 its T
+mat[mat>15] #printing the whole matrix but only when its true that it is over 15
+
+mat + mat #adds the matrix 
+
+mat %*% mat # this is to do true mathematical matrix multiplication 
