@@ -65,3 +65,4 @@ avg
 stockMatrix <- cbind(stockMatrix,avg)
 stockMatrix
 
+
