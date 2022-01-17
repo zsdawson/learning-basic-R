@@ -9,7 +9,7 @@ v2.1
 ################################################################################
 goog <- c(450,451,452,445,468)
 msft <- c(230,231,232,233,220) # just naming some vectors 
- 
+  
 stocks <- c(goog,msft)
 
 stockMatrix <- matrix(stocks,byrow=T,nrow = 2) #
