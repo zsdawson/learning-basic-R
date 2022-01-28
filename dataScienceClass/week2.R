@@ -7,5 +7,8 @@ df <- data.frame(surveys)
 max(df$Writing)
 min(df$Math)
 
+max(df$Math)
+min(df$Writing)
+
 # mean()
 
