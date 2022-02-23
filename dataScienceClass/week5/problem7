@@ -1,5 +1,5 @@
 library(readxl)
-myData <- read_excel("/Users/zacharydawson/Desktop/Ch3_Q23_Data_File.xlsx")
+myData <- read_excel("/Users/ZSD/Desktop/Ch3_Q23_Data_File.xlsx")
 myData
 #    Student Sex    Feasible
 #      <dbl> <chr>  <chr>   
