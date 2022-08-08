@@ -22,6 +22,20 @@ flights_sml <- select(flights,
                       )
 
 
+mutate(flights_sml,
+       gain = arr_delay - dep_delay,
+       speed = distance / air_time *  60)
+
+mutate(flights_sml,
+       gain = arr_delay - dep_delay,
+       hours = air_time / 60,
+       gain_per_hours = gain / hours
+       )
+
+transmute(flights, 
+            gain = arr_delay - dep_delay,
+            hours =  air_time / 60, 
+            gain_per_hour = gain / hour)
 
 
 
